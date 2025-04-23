@@ -10,8 +10,8 @@
   --heading-font: "Nunito", "Segoe UI", sans-serif;
   --body-font: "Nunito", "Segoe UI", sans-serif;
 }
-html{
-  min-height: 100vh;
+html, body {
+  height: 100vh;
   margin: 0;
   padding: 0;
   font-family: var(--body-font);
@@ -22,13 +22,36 @@ html{
   transition: background 0.3s, color 0.3s;
   letter-spacing: 0.01em;
   line-height: 1.6;
+  overflow: hidden; /* Prevent page scroll */
 }
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent page scroll */
+  width: 100vw;
+}
+
 .container {
-  max-width: 600px;
+  max-width: 800px;
   margin: 40px auto;
   display: flex;
   flex-direction: column;
   gap: 24px;
+  height: 92vh;
+  overflow-y: auto; /* Make only container scrollable */
+  overscroll-behavior: contain;
+  padding: 32px 24px; /* Added padding for clarity */
+  background: rgba(255,255,255,0.10); /* Optional: subtle background for contrast */
+  border-radius: 24px; /* Optional: soften container edges */
+  box-shadow: 0 6px 32px 0 rgba(129, 106, 163, 0.08); /* Optional: subtle shadow */
+  /* Hide scrollbar for Webkit browsers */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+.container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 .card {
   background: var(--white);
@@ -36,17 +59,20 @@ html{
   box-shadow: var(--card-shadow);
   padding: 24px;
   margin: 0;
+  margin-bottom: 16px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  transition: box-shadow var(--transition), transform var(--transition), opacity 0.2s;
+  transition: box-shadow var(--transition), transform var(--transition), opacity 0.2s, background 0.2s;
   opacity: 0.95;
   backdrop-filter: blur(6px) saturate(1.2);
   -webkit-backdrop-filter: blur(6px) saturate(1.2);
 }
 .card:hover {
-  box-shadow: 0 8px 32px 0 rgba(129, 106, 163, 0.18);
-  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 12px 40px 0 rgba(129, 106, 163, 0.22);
+  transform: translateY(-4px) scale(1.015);
+  background: #f8f4ff;
+  opacity: 1;
 }
 .avatar {
   width: 100px;
@@ -167,7 +193,8 @@ html{
 @media (max-width: 700px) {
   .container {
     max-width: 98vw;
-    padding: 8px;
+    padding: 12px 4px;
+    height: 96vh;
   }
   .card {
     padding: 14px;

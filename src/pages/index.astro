@@ -49,15 +49,6 @@ import SnsCard from "../components/SnsCard.astro";
       content="https://www.gravatar.com/avatar/5c89b3c3f22b50ff678ca1c1898b58fc?d=identicon&s=200"
     />
     <!-- End SEO Meta Tags -->
-    <script>
-      function copyDiscord() {
-        const el = document.getElementById("discord-item");
-        navigator.clipboard.writeText(".resolved");
-        el?.classList.add("copied");
-        setTimeout(() => el?.classList.remove("copied"), 1200);
-      }
-    </script>
-  </head>
   <body>
     <main class="container">
       <AvatarCard />
