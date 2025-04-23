@@ -1,5 +1,6 @@
 /* Global and card styles for portfolio */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 :root {
   --primary: #816aa3;
   --white: #fff;
@@ -10,26 +11,30 @@
   --heading-font: "Nunito", "Segoe UI", sans-serif;
   --body-font: "Nunito", "Segoe UI", sans-serif;
 }
-html, body {
+
+html,
+body {
   height: 100vh;
   margin: 0;
   padding: 0;
   font-family: var(--body-font);
-  background-image: url('../img/bg.jpg');
+  background-image: url('../img/bg.webp');
   background-repeat: no-repeat !important;
   background-size: cover;
   color: var(--black);
   transition: background 0.3s, color 0.3s;
   letter-spacing: 0.01em;
   line-height: 1.6;
-  overflow: hidden; /* Prevent page scroll */
+  overflow: hidden;
+  /* Prevent page scroll */
 }
 
 body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  overflow: hidden; /* Prevent page scroll */
+  overflow: hidden;
+  /* Prevent page scroll */
   width: 100vw;
 }
 
@@ -40,19 +45,29 @@ body {
   flex-direction: column;
   gap: 24px;
   height: 92vh;
-  overflow-y: auto; /* Make only container scrollable */
+  overflow-y: auto;
+  /* Make only container scrollable */
   overscroll-behavior: contain;
-  padding: 32px 24px; /* Added padding for clarity */
-  background: rgba(255,255,255,0.10); /* Optional: subtle background for contrast */
-  border-radius: 24px; /* Optional: soften container edges */
-  box-shadow: 0 6px 32px 0 rgba(129, 106, 163, 0.08); /* Optional: subtle shadow */
+  padding: 32px 24px;
+  /* Added padding for clarity */
+  background: rgba(255, 255, 255, 0.10);
+  /* Optional: subtle background for contrast */
+  border-radius: 24px;
+  /* Optional: soften container edges */
+  box-shadow: 0 6px 32px 0 rgba(129, 106, 163, 0.08);
+  /* Optional: subtle shadow */
   /* Hide scrollbar for Webkit browsers */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
 }
+
 .container::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none;
+  /* Chrome, Safari, Opera */
 }
+
 .card {
   background: var(--white);
   border-radius: var(--card-radius);
@@ -68,12 +83,14 @@ body {
   backdrop-filter: blur(6px) saturate(1.2);
   -webkit-backdrop-filter: blur(6px) saturate(1.2);
 }
+
 .card:hover {
   box-shadow: 0 12px 40px 0 rgba(129, 106, 163, 0.22);
   transform: translateY(-4px) scale(1.015);
   background: #f8f4ff;
   opacity: 1;
 }
+
 .avatar {
   width: 100px;
   height: 100px;
@@ -82,8 +99,9 @@ body {
   background: var(--white);
   margin-bottom: 8px;
   align-self: center;
-  box-shadow: 0 2px 12px 0 rgba(129,106,163,0.10);
+  box-shadow: 0 2px 12px 0 rgba(129, 106, 163, 0.10);
 }
+
 .name {
   font-size: 2.2rem;
   font-weight: 900;
@@ -93,6 +111,7 @@ body {
   letter-spacing: 0.03em;
   font-family: var(--heading-font);
 }
+
 .realname {
   font-size: 1.15rem;
   color: #555;
@@ -101,7 +120,9 @@ body {
   font-weight: 600;
   letter-spacing: 0.01em;
 }
-.location, .education {
+
+.location,
+.education {
   font-size: 1rem;
   color: #816aa3;
   margin: 0;
@@ -109,6 +130,7 @@ body {
   font-weight: 500;
   letter-spacing: 0.01em;
 }
+
 .bio {
   font-size: 1.1rem;
   color: var(--black);
@@ -117,6 +139,7 @@ body {
   padding: 10px 14px;
   margin: 0;
 }
+
 .job {
   font-size: 1rem;
   color: var(--primary);
@@ -126,6 +149,7 @@ body {
   margin: 0;
   font-weight: 500;
 }
+
 .sns-list {
   list-style: none;
   padding: 0;
@@ -134,6 +158,7 @@ body {
   flex-direction: column;
   gap: 10px;
 }
+
 .sns-item {
   display: flex;
   align-items: center;
@@ -143,12 +168,15 @@ body {
   cursor: pointer;
   user-select: text;
 }
+
 .sns-item a {
   color: var(--primary);
   text-decoration: none;
   font-weight: 500;
 }
-.sns-item img, .sns-item svg {
+
+.sns-item img,
+.sns-item svg {
   width: 24px;
   height: 24px;
   min-width: 24px;
@@ -158,10 +186,12 @@ body {
   display: inline-block;
   vertical-align: middle;
 }
+
 .sns-item.discord {
   cursor: pointer;
   position: relative;
 }
+
 .sns-item.discord.copied::after {
   content: 'Copied!';
   position: absolute;
@@ -175,6 +205,7 @@ body {
   opacity: 1;
   transition: opacity 0.2s;
 }
+
 .section-title {
   display: flex;
   align-items: center;
@@ -186,35 +217,47 @@ body {
   letter-spacing: 0.02em;
   font-family: var(--heading-font);
 }
+
 .section-title i {
   font-size: 1.3em;
   vertical-align: middle;
 }
+
 @media (max-width: 700px) {
   .container {
     max-width: 98vw;
     padding: 12px 4px;
     height: 96vh;
   }
+
   .card {
     padding: 14px;
   }
+
   .avatar {
     width: 70px;
     height: 70px;
   }
+
   .name {
     font-size: 1.4rem;
   }
+
   .realname {
     font-size: 1rem;
   }
-  .location, .education {
+
+  .location,
+  .education {
     font-size: 0.95rem;
   }
-  .bio, .job, .sns-item {
+
+  .bio,
+  .job,
+  .sns-item {
     font-size: 0.95rem;
   }
+
   .section-title {
     font-size: 1rem;
   }

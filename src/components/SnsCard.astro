@@ -1,5 +1,10 @@
 ---
-
+function copyDiscord() {
+        const el = document.getElementById("discord-item");
+        navigator.clipboard.writeText(".resolved");
+        el?.classList.add("copied");
+        setTimeout(() => el?.classList.remove("copied"), 1200);
+      }
 ---
 
 <section class="card">
