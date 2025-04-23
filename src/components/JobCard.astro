@@ -1,0 +1,8 @@
+---
+const jobTimestamp = (await import("../job.txt?raw")).default.trim();
+---
+
+<section class="card">
+  <div class="section-title">Job</div>
+  <div class="job">{jobTimestamp}</div>
+</section>

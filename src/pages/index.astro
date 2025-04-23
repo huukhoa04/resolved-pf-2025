@@ -1,16 +1,69 @@
 ---
-
+import AvatarCard from "../components/AvatarCard.astro";
+import BioCard from "../components/BioCard.astro";
+import JobCard from "../components/JobCard.astro";
+import SnsCard from "../components/SnsCard.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="/icon.png" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@tabler/icons-webfont@latest/tabler-icons.min.css"
+    />
+    <title>Resolved | Portfolio</title>
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Resolved (Nguyen Huu Khoa) - Portfolio of a full-stack web developer and student at Da Nang University of Science and Technology."
+    />
+    <meta
+      name="keywords"
+      content="Resolved, Nguyen Huu Khoa, Portfolio, Web Developer, Full-stack, Front-end, Da Nang University of Science and Technology, MakeAI Solutions"
+    />
+    <meta name="author" content="Nguyen Huu Khoa" />
+    <meta property="og:title" content="Resolved | Portfolio" />
+    <meta
+      property="og:description"
+      content="Portfolio of Resolved (Nguyen Huu Khoa), full-stack web developer and student at Da Nang University of Science and Technology."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://www.gravatar.com/avatar/5c89b3c3f22b50ff678ca1c1898b58fc?d=identicon&s=200"
+    />
+    <meta property="og:url" content="https://resolved.id.vn/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Resolved | Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Portfolio of Resolved (Nguyen Huu Khoa), full-stack web developer and student at Da Nang University of Science and Technology."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.gravatar.com/avatar/5c89b3c3f22b50ff678ca1c1898b58fc?d=identicon&s=200"
+    />
+    <!-- End SEO Meta Tags -->
+    <script>
+      function copyDiscord() {
+        const el = document.getElementById("discord-item");
+        navigator.clipboard.writeText(".resolved");
+        el?.classList.add("copied");
+        setTimeout(() => el?.classList.remove("copied"), 1200);
+      }
+    </script>
+  </head>
+  <body>
+    <main class="container">
+      <AvatarCard />
+      <BioCard />
+      <JobCard />
+      <SnsCard />
+    </main>
+  </body>
 </html>

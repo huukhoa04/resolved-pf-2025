@@ -1,0 +1,16 @@
+---
+import md5 from "../utils/md5.ts";
+const gravatarEmail = "huukhoa04@gmail.com";
+const gravatarHash = md5(gravatarEmail.trim().toLowerCase());
+const gravatarUrl = `https://www.gravatar.com/avatar/${gravatarHash}?d=identicon&s=200`;
+---
+
+<section class="card">
+  <img class="avatar" src={gravatarUrl} alt="Resolved Avatar" loading="lazy" />
+  <div class="name">Resolved</div>
+  <div class="realname">Nguyen Huu Khoa</div>
+  <div class="location">Viet Nam</div>
+  <div class="education">
+    Da Nang University of Science and Technology - Software Engineer
+  </div>
+</section>
