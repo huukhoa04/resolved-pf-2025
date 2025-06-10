@@ -18,7 +18,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--body-font);
-  background-image: url('../img/bg.webp');
+  background-image: url('../img/bg-3.svg');
   background-repeat: no-repeat !important;
   background-size: cover;
   color: var(--black);
